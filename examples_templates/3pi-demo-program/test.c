@@ -160,7 +160,7 @@ char wait_for_250_ms_or_button_b()
 void led_test()
 {
 	play("c32");
-	print("Red  ");
+	print("Reddd  ");
 
 	red_led(1);
 	if(wait_for_250_ms_or_button_b())

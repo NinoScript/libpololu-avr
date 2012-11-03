@@ -1,0 +1,177 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		730DC5BA1644DEDB00D58056 /* bargraph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bargraph.c; sourceTree = "<group>"; };
+		730DC5BB1644DEDB00D58056 /* bargraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bargraph.h; sourceTree = "<group>"; };
+		730DC5BC1644DEDB00D58056 /* follow-segment.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "follow-segment.c"; sourceTree = "<group>"; };
+		730DC5BD1644DEDB00D58056 /* follow-segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "follow-segment.h"; sourceTree = "<group>"; };
+		730DC5BE1644DEDB00D58056 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		730DC5BF1644DEDB00D58056 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		730DC5C01644DEDB00D58056 /* maze-solve.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "maze-solve.c"; sourceTree = "<group>"; };
+		730DC5C11644DEDB00D58056 /* maze-solve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "maze-solve.h"; sourceTree = "<group>"; };
+		730DC5C21644DEDB00D58056 /* turn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = turn.c; sourceTree = "<group>"; };
+		730DC5C31644DEDB00D58056 /* turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		730DC5AD1644DE9500D58056 = {
+			isa = PBXGroup;
+			children = (
+				730DC5BA1644DEDB00D58056 /* bargraph.c */,
+				730DC5BB1644DEDB00D58056 /* bargraph.h */,
+				730DC5BC1644DEDB00D58056 /* follow-segment.c */,
+				730DC5BD1644DEDB00D58056 /* follow-segment.h */,
+				730DC5BE1644DEDB00D58056 /* main.c */,
+				730DC5BF1644DEDB00D58056 /* Makefile */,
+				730DC5C01644DEDB00D58056 /* maze-solve.c */,
+				730DC5C11644DEDB00D58056 /* maze-solve.h */,
+				730DC5C21644DEDB00D58056 /* turn.c */,
+				730DC5C31644DEDB00D58056 /* turn.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		730DC5B41644DE9500D58056 /* Test */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 730DC5B71644DE9500D58056 /* Build configuration list for PBXLegacyTarget "Test" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = Test;
+			passBuildSettingsInEnvironment = 1;
+			productName = "Concurso AIE";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		730DC5AF1644DE9500D58056 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Cristián Arenas Ulloa";
+			};
+			buildConfigurationList = 730DC5B21644DE9500D58056 /* Build configuration list for PBXProject "Concurso AIE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 730DC5AD1644DE9500D58056;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				730DC5B41644DE9500D58056 /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		730DC5B51644DE9500D58056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		730DC5B61644DE9500D58056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		730DC5B81644DE9500D58056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		730DC5B91644DE9500D58056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		730DC5B21644DE9500D58056 /* Build configuration list for PBXProject "Concurso AIE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730DC5B51644DE9500D58056 /* Debug */,
+				730DC5B61644DE9500D58056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		730DC5B71644DE9500D58056 /* Build configuration list for PBXLegacyTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730DC5B81644DE9500D58056 /* Debug */,
+				730DC5B91644DE9500D58056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 730DC5AF1644DE9500D58056 /* Project object */;
+}

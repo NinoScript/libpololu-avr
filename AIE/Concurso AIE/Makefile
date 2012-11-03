@@ -4,8 +4,10 @@ AVRDUDE_DEVICE = m328p
 
 AVRTOOLS = /usr/local/CrossPack-AVR/bin
 
-CFLAGS=-g -Wall -mcall-prologues -mmcu=$(MCU) $(DEVICE_SPECIFIC_CFLAGS) -Os
-CC=$(AVRTOOLS)/avr-gcc
+#CFLAGS=-g -Wall -mcall-prologues -mmcu=$(MCU) $(DEVICE_SPECIFIC_CFLAGS) -Os
+#CC=$(AVRTOOLS)/avr-gcc
+CFLAGS=-g -Wall $(DEVICE_SPECIFIC_CFLAGS) -Os
+CC=/usr/bin/gcc
 OBJ2HEX=$(AVRTOOLS)/avr-objcopy
 LDFLAGS=-Wl,-gc-sections -lpololu_$(DEVICE) -Wl,-relax
 

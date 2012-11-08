@@ -1,7 +1,7 @@
 /*
  * This file is responsible for drawing sensor bar graphs.
  */
-
+#include "robot-wrapper.h"
 
 // Data for generating the characters used in load_custom_characters
 // and display_readings.  By reading levels[] starting at various
@@ -28,6 +28,7 @@ const char levels[] PROGMEM = {
 // characters can be loaded; we use them for 7 levels of a bar graph.
 void load_custom_characters()
 {
+#if(AVRTARGET)
 	lcd_load_custom_character(levels+0,0); // no offset, e.g. one bar
 	lcd_load_custom_character(levels+1,1); // two bars
 	lcd_load_custom_character(levels+2,2); // etc...
@@ -36,11 +37,13 @@ void load_custom_characters()
 	lcd_load_custom_character(levels+5,5);
 	lcd_load_custom_character(levels+6,6);
 	clear(); // the LCD must be cleared for the characters to take effect
+#endif
 }
 
 // This function displays the sensor readings using a bar graph.
 void display_readings(const unsigned int *calibrated_values)
 {
+#if(AVRTARGET)
 	unsigned char i;
 
 	for(i=0;i<5;i++) {
@@ -58,6 +61,7 @@ void display_readings(const unsigned int *calibrated_values)
 		// Display the bar graph character.
 		print_character(c);
 	}
+#endif
 }
 
 // Local Variables: **

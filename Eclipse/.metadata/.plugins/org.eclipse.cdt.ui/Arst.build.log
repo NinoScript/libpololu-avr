@@ -1,0 +1,20 @@
+01:46:48 **** Incremental Build of configuration Debug for project Arst ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Arst.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    6674 bytes (20.4% Full)
+(.text + .data + .bootloader)
+
+Data:        111 bytes (5.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:46:48 Build Finished (took 219ms)
+

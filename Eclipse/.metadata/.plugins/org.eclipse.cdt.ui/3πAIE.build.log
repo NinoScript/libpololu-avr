@@ -1,0 +1,175 @@
+18:40:26 **** Incremental Build of configuration Debug for project 3¹AIE ****
+make all 
+Building file: ../src/main.cc
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega328p -DF_CPU=20000000UL -MMD -MP -MF"src/main.d" -MT"src/main.d" -c -o "src/main.o" "../src/main.cc"
+../src/main.cc:22:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:23:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:25:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:26:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:28:33: warning: only initialized variables can be placed into program memory area
+../src/main.cc:29:33: warning: only initialized variables can be placed into program memory area
+../src/main.cc:30:33: warning: only initialized variables can be placed into program memory area
+../src/main.cc:31:33: warning: only initialized variables can be placed into program memory area
+../src/main.cc:33:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:34:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:36:36: warning: only initialized variables can be placed into program memory area
+../src/main.cc:37:36: warning: only initialized variables can be placed into program memory area
+../src/main.cc:39:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:40:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:41:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:42:27: warning: only initialized variables can be placed into program memory area
+../src/main.cc:43:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:44:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:45:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:46:29: warning: only initialized variables can be placed into program memory area
+../src/main.cc:48:25: warning: only initialized variables can be placed into program memory area
+../src/main.cc:49:25: warning: only initialized variables can be placed into program memory area
+../src/main.cc:65:22: warning: only initialized variables can be placed into program memory area
+../src/main.cc:66:30: warning: only initialized variables can be placed into program memory area
+../src/main.cc:67:28: warning: only initialized variables can be placed into program memory area
+Finished building: ../src/main.cc
+../src/main.cc:68:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:69:28: warning: only initialized variables can be placed into program memory area
+../src/main.cc:70:25: warning: only initialized variables can be placed into program memory area
+../src/main.cc:76:21: warning: only initialized variables can be placed into program memory area
+ 
+../src/main.cc:94:19: warning: only initialized variables can be placed into program memory area
+../src/main.cc:106:25: warning: only initialized variables can be placed into program memory area
+../src/main.cc:289:20: warning: only initialized variables can be placed into program memory area
+../src/main.cc:300:26: warning: only initialized variables can be placed into program memory area
+../src/main.cc: In function 'void music_test()':
+../src/main.cc:318:47: warning: comparison between signed and unsigned integer expressions
+Building target: 3¹AIE.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,3¹AIE.map,--cref -mmcu=atmega328p -o "3¹AIE.elf"  ./src/main.o   
+./src/main.o: In function `read_battery_millivolts':
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/include/pololu/Pololu3pi/../OrangutanAnalog/OrangutanAnalog.h:282: undefined reference to `read_battery_millivolts_3pi'
+./src/main.o: In function `load_custom_characters()':
+../src/main.cc:122: undefined reference to `lcd_load_custom_character'
+../src/main.cc:123: undefined reference to `lcd_load_custom_character'
+../src/main.cc:124: undefined reference to `lcd_load_custom_character'
+../src/main.cc:125: undefined reference to `lcd_load_custom_character'
+../src/main.cc:126: undefined reference to `lcd_load_custom_character'
+./src/main.o:../src/main.cc:127: more undefined references to `lcd_load_custom_character' follow
+./src/main.o: In function `load_custom_characters()':
+../src/main.cc:130: undefined reference to `clear'
+./src/main.o: In function `bat_test()':
+../src/main.cc:141: undefined reference to `print_long'
+../src/main.cc:142: undefined reference to `print'
+../src/main.cc:144: undefined reference to `delay_ms'
+./src/main.o: In function `wait_for_250_ms_or_button_b()':
+../src/main.cc:152: undefined reference to `delay_ms'
+../src/main.cc:153: undefined reference to `button_is_pressed'
+./src/main.o: In function `led_test()':
+../src/main.cc:162: undefined reference to `play'
+../src/main.cc:163: undefined reference to `print'
+../src/main.cc:172: undefined reference to `play'
+../src/main.cc:173: undefined reference to `lcd_goto_xy'
+../src/main.cc:174: undefined reference to `print'
+./src/main.o: In function `ir_test()':
+../src/main.cc:188: undefined reference to `button_is_pressed'
+../src/main.cc:189: undefined reference to `read_line_sensors'
+../src/main.cc:191: undefined reference to `read_line_sensors'
+../src/main.cc:207: undefined reference to `print_character'
+../src/main.cc:212: undefined reference to `button_is_pressed'
+../src/main.cc:213: undefined reference to `print'
+../src/main.cc:215: undefined reference to `print'
+../src/main.cc:217: undefined reference to `delay_ms'
+./src/main.o: In function `motor_test()':
+../src/main.cc:228: undefined reference to `button_is_pressed'
+../src/main.cc:232: undefined reference to `delay_ms'
+../src/main.cc:236: undefined reference to `button_is_pressed'
+../src/main.cc:245: undefined reference to `button_is_pressed'
+../src/main.cc:249: undefined reference to `delay_ms'
+../src/main.cc:253: undefined reference to `button_is_pressed'
+../src/main.cc:277: undefined reference to `print_character'
+../src/main.cc:278: undefined reference to `print_character'
+../src/main.cc:279: undefined reference to `print_character'
+../src/main.cc:280: undefined reference to `lcd_goto_xy'
+../src/main.cc:281: undefined reference to `print_character'
+../src/main.cc:282: undefined reference to `print_character'
+../src/main.cc:283: undefined reference to `print_character'
+../src/main.cc:285: undefined reference to `set_motors'
+../src/main.cc:286: undefined reference to `delay_ms'
+./src/main.o: In function `music_test()':
+../src/main.cc:308: undefined reference to `get_ms'
+../src/main.cc:313: undefined reference to `print_character'
+../src/main.cc:315: undefined reference to `get_ms'
+../src/main.cc:322: undefined reference to `is_playing'
+../src/main.cc:324: undefined reference to `play_from_program_space'
+../src/main.cc:327: undefined reference to `delay_ms'
+./src/main.o: In function `pot_test()':
+../src/main.cc:332: undefined reference to `get_ms'
+../src/main.cc:337: undefined reference to `read_trimpot'
+../src/main.cc:337: undefined reference to `print_long'
+../src/main.cc:338: undefined reference to `print'
+../src/main.cc:342: undefined reference to `read_trimpot'
+../src/main.cc:343: undefined reference to `play_frequency'
+../src/main.cc:340: undefined reference to `get_ms'
+./src/main.o: In function `time_test()':
+../src/main.cc:367: undefined reference to `get_ms'
+../src/main.cc:373: undefined reference to `button_is_pressed'
+../src/main.cc:379: undefined reference to `is_playing'
+../src/main.cc:380: undefined reference to `play_from_program_space'
+../src/main.cc:384: undefined reference to `button_is_pressed'
+../src/main.cc:387: undefined reference to `button_is_pressed'
+../src/main.cc:392: undefined reference to `play_from_program_space'
+../src/main.cc:396: undefined reference to `button_is_pressed'
+../src/main.cc:399: undefined reference to `print_long'
+../src/main.cc:400: undefined reference to `print_long'
+../src/main.cc:401: undefined reference to `print_character'
+../src/main.cc:402: undefined reference to `print_long'
+../src/main.cc:404: undefined reference to `print_long'
+../src/main.cc:405: undefined reference to `print_character'
+../src/main.cc:406: undefined reference to `print_long'
+../src/main.cc:407: undefined reference to `print_long'
+../src/main.cc:410: undefined reference to `is_playing'
+../src/main.cc:411: undefined reference to `play_from_program_space'
+./src/main.o: In function `print_two_lines_delay_1s(char const*, char const*)':
+../src/main.cc:418: undefined reference to `clear'
+../src/main.cc:419: undefined reference to `print_from_program_space'
+../src/main.cc:420: undefined reference to `lcd_goto_xy'
+../src/main.cc:421: undefined reference to `print_from_program_space'
+../src/main.cc:422: undefined reference to `delay_ms'
+./src/main.o: In function `wait_for_button_and_beep()':
+../src/main.cc:429: undefined reference to `wait_for_button_press'
+../src/main.cc:432: undefined reference to `play_from_program_space'
+../src/main.cc:434: undefined reference to `play_from_program_space'
+../src/main.cc:436: undefined reference to `play_from_program_space'
+../src/main.cc:438: undefined reference to `wait_for_button_release'
+./src/main.o: In function `initialize()':
+../src/main.cc:449: undefined reference to `pololu_3pi_init'
+../src/main.cc:452: undefined reference to `play_from_program_space'
+../src/main.cc:457: undefined reference to `clear'
+../src/main.cc:458: undefined reference to `print_from_program_space'
+../src/main.cc:459: undefined reference to `lcd_goto_xy'
+../src/main.cc:460: undefined reference to `print_from_program_space'
+../src/main.cc:464: undefined reference to `play_from_program_space'
+./src/main.o: In function `menu_select()':
+../src/main.cc:477: undefined reference to `clear'
+../src/main.cc:478: undefined reference to `lcd_goto_xy'
+../src/main.cc:479: undefined reference to `print_from_program_space'
+../src/main.cc:480: undefined reference to `lcd_goto_xy'
+../src/main.cc:481: undefined reference to `print_from_program_space'
+../src/main.cc:482: undefined reference to `lcd_show_cursor'
+../src/main.cc:486: undefined reference to `button_is_pressed'
+../src/main.cc:487: undefined reference to `wait_for_button_press'
+../src/main.cc:491: undefined reference to `play_from_program_space'
+../src/main.cc:496: undefined reference to `lcd_hide_cursor'
+../src/main.cc:497: undefined reference to `clear'
+../src/main.cc:499: undefined reference to `play_from_program_space'
+../src/main.cc:500: undefined reference to `wait_for_button_release'
+../src/main.cc:504: undefined reference to `lcd_goto_xy'
+../src/main.cc:505: undefined reference to `print_from_program_space'
+../src/main.cc:506: undefined reference to `lcd_goto_xy'
+../src/main.cc:502: undefined reference to `button_is_pressed'
+../src/main.cc:510: undefined reference to `set_motors'
+../src/main.cc:511: undefined reference to `stop_playing'
+../src/main.cc:516: undefined reference to `play_from_program_space'
+../src/main.cc:522: undefined reference to `play_from_program_space'
+collect2: ld returned 1 exit status
+make: *** [3¹AIE.elf] Error 1
+
+18:40:27 Build Finished (took 728ms)
+

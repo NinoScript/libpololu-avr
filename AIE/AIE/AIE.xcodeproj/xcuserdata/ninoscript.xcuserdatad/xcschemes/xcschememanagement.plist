@@ -7,12 +7,17 @@
 		<key>3π.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
-		<key>AIE.xcscheme</key>
+		<key>Mac app (no funca).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<key>Simulavr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>730DC70816458E6800D58056</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7368C0CC164B7FF300414F91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73727E0B164C133E004A07F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

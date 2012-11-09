@@ -15,19 +15,25 @@ AVRDUDE=$(AVRTOOLS)/avrdude
 TARGET=main
 OBJECT_FILES=main.o bargraph.o maze-solve.o follow-segment.o turn.o
 
-all: $(TARGET).hex
+# SIMULAVR=$(AVRTOOLS)/simulavr
+SIMULAVR=/opt/local/bin/simulavr # v1.0 de Macports
+
+all: $(TARGET).hex $(TARGET).elf
 
 clean:
-	rm -f *.o *.hex *.obj *.hex
+	rm -f *.hex *.elf *.o
 
-%.hex: %.obj
+%.hex: %.elf
 	$(OBJ2HEX) -R .eeprom -O ihex $< $@
 
 %.o: %.cpp
 	$(CPP) $(CFLAGS) -c -o $@ $< 
 
-%.obj: $(OBJECT_FILES)
+%.elf: $(OBJECT_FILES)
 	$(CC) $(CFLAGS) $(OBJECT_FILES) $(LDFLAGS) -o $@
+
+debug: $(TARGET).elf
+	$(SIMULAVR) -d atmega328 -f $(TARGET).elf -W 0x20,- -R 0x22,- -T exit # -F 20000000
 
 program: $(TARGET).hex
 	$(AVRDUDE) -V -p $(AVRDUDE_DEVICE) -c avrisp -P $(PORT) -b 115200 -U flash:w:$(TARGET).hex

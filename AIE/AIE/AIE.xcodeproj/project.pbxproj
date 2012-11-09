@@ -98,15 +98,29 @@
 /* Begin PBXLegacyTarget section */
 		730DC70816458E6800D58056 /* 3π */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--directory=\"AIE\" $(ACTION)";
+			buildArgumentsString = "$(ACTION)";
 			buildConfigurationList = 730DC70916458E6800D58056 /* Build configuration list for PBXLegacyTarget "3π" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "";
+			buildWorkingDirectory = AIE;
 			dependencies = (
 			);
 			name = "3π";
+			passBuildSettingsInEnvironment = 1;
+			productName = "3π";
+		};
+		73727E0B164C133E004A07F1 /* Simulavr */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 73727E0C164C133E004A07F1 /* Build configuration list for PBXLegacyTarget "Simulavr" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = AIE;
+			dependencies = (
+			);
+			name = Simulavr;
 			passBuildSettingsInEnvironment = 1;
 			productName = "3π";
 		};
@@ -151,8 +165,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				730DC6F9164588FD00D58056 /* AIE */,
 				730DC70816458E6800D58056 /* 3π */,
+				73727E0B164C133E004A07F1 /* Simulavr */,
+				730DC6F9164588FD00D58056 /* AIE */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +280,27 @@
 			};
 			name = Release;
 		};
+		73727E0D164C133E004A07F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "3π copy";
+			};
+			name = Debug;
+		};
+		73727E0E164C133E004A07F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "3π copy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -291,6 +327,15 @@
 			buildConfigurations = (
 				730DC70A16458E6800D58056 /* Debug */,
 				730DC70B16458E6800D58056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73727E0C164C133E004A07F1 /* Build configuration list for PBXLegacyTarget "Simulavr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73727E0D164C133E004A07F1 /* Debug */,
+				73727E0E164C133E004A07F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

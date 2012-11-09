@@ -12,7 +12,6 @@
  * http://forum.pololu.com
  *
  */
-
 // The 3pi include file must be at the beginning of any program that
 // uses the Pololu AVR library and 3pi.
 #include <pololu/3pi.h>
@@ -36,6 +35,75 @@ const char demo_name_line2[] PROGMEM = "solver";
 const char welcome[] PROGMEM = ">g32>>c32";
 const char go[] PROGMEM = "L16 cdegreg4";
 
+/* This port correponds to the "-W 0x20,-" command line option. */
+#define special_output_port (*((volatile char *)0x20))
+
+/* This port correponds to the "-R 0x22,-" command line option. */
+#define special_input_port  (*((volatile char *)0x22))
+
+
+/* Poll the specified string out the debug port. */
+void debug_puts(const char *str) {
+	const char *c;
+
+	for(c = str; *c; c++) {
+		special_output_port = *c;
+	}
+}
+#include <stdarg.h>
+#include <stdio.h>
+void p(const char *fmt, ... ){
+	const char * c;
+	char tmp[128]; // resulting string limited to 128 chars
+	va_list args;
+	va_start (args, fmt );
+	vsnprintf(tmp, 128, fmt, args);
+	va_end (args);
+	for(c = tmp; *c; c++)
+		switch (*c) {
+			case '\xf7': debug_puts("π"); break;
+			default    : special_output_port = *c;
+		}
+	
+}
+void debug_print_from_program_space(const char *str) {
+	char c;
+	while ((c = pgm_read_byte(str)) != 0) {
+		switch (c) {
+			case '\xf7': debug_puts("π"); break;
+			default    : special_output_port = c;
+		}
+		str ++;
+	}
+	special_output_port = '\n';
+}
+
+int debug_button_is_pressed (int button) {
+	debug_puts("Apreta un botón (a, b o c)\n");
+	char in_char = special_input_port;
+	char descartar_salto_de_linea = special_input_port;
+	
+	p("se apreto el boton '%c', que era el ", in_char);
+	switch (in_char) {
+		case 'a': case 'A': if (button == BUTTON_A) p("btn correcto\n"); break;
+		case 'b': case 'B': if (button == BUTTON_B) p("btn correcto\n"); break;
+		case 'c': case 'C': if (button == BUTTON_C) p("btn correcto\n"); break;
+		default: p("btn incorrecto\n");
+	}
+	
+	switch (in_char) {
+		case 'a': case 'A': return button == BUTTON_A;
+		case 'b': case 'B': return button == BUTTON_B;
+		case 'c': case 'C': return button == BUTTON_C;
+		default: return 0;
+	}
+}
+
+#define button_is_pressed debug_button_is_pressed
+
+#define print_from_program_space debug_print_from_program_space
+#define delay_ms(x) delay_ms(x/10)
+
 // Initializes the 3pi, displays a welcome message, calibrates, and
 // plays the initial music.
 void initialize()
@@ -48,7 +116,7 @@ void initialize()
 	// corresponds to 2000*0.4 us = 0.8 ms on our 20 MHz processor.
 	pololu_3pi_init(2000);
 	load_custom_characters(); // load the custom characters
-	
+		
 	// Play welcome music and display a message
 	print_from_program_space(welcome_line1);
 	lcd_goto_xy(0,1);
@@ -106,6 +174,7 @@ void initialize()
 	// Display calibrated values as a bar graph.
 	while(!button_is_pressed(BUTTON_B))
 	{
+		p("button_is_pressed(%i): %i\n", BUTTON_B, button_is_pressed(BUTTON_B));
 		// Read the sensor values and get the position measurement.
 		unsigned int position = read_line(sensors,IR_EMITTERS_ON);
 
@@ -136,6 +205,8 @@ void initialize()
 // must have a main() function defined somewhere.
 int main()
 {
+	// p("button_is_pressed(%i): %i\n", BUTTON_B, button_is_pressed(BUTTON_B));
+	
 	// set up the 3pi
 	initialize();
 

@@ -451,6 +451,9 @@ unsigned int PololuQTRSensors::readLine(unsigned int *sensor_values,
 
 	if(!on_line)
 	{
+		// Parche por linea muy pequeña
+		return last_value;
+		
 		// If it last read to the left of center, return 0.
 		if(last_value < (_numSensors-1)*1000/2)
 			return 0;

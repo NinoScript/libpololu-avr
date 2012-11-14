@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/opt/local/bin/simulavr"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="--device atmega328 --file ${project_loc}/Debug/Arst.elf  -W 0x20,- -R 0x22,- -g"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc}"/>
-</launchConfiguration>
